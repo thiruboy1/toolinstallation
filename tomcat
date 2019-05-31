@@ -32,7 +32,7 @@ tomcatup
  tomcatdown
  tomcatup
  
-
+#create users in /conf/tomcat-user.xml
 
 
 
