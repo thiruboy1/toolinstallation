@@ -1,0 +1,9 @@
+##Tomcat Inatallation on Linux
+
+#download and install java
+yum install java-1.8*
+#Go to web site https://tomcat.apache.org/download-90.cgi
+#based on Your OS downlaod image
+
+#wget http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz
+ 
