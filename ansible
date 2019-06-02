@@ -6,4 +6,11 @@ passwd ansadmin
 echo "ansadmin ALL=(ALL) ALL" >> /etc/sudoers
 sed -ie 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 ssh-keygen
-ssh-copy-id 
+echo "enter target ip address"
+read ip
+ssh-copy-id i ~/.ssh/id_rsa.pub $ip
+echo "enter webserver name"
+read name
+echo -e "[$name]\n$ip" >> /etc/ansible/hosts
+ansible -m ping $name
+
