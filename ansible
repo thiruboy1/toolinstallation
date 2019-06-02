@@ -1,0 +1,9 @@
+sudo yum update
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+ansible --version
+useradd ansadmin
+passwd ansadmin
+echo "ansadmin ALL=(ALL) ALL" >> /etc/sudoers
+sed -ie 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+ssh-keygen
+ssh-copy-id 
