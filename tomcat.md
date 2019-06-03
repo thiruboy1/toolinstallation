@@ -1,7 +1,7 @@
 #Tomcat Inatallation on Linux
-'''sh
+ ```sh 
 sudo yum update -y
-'''
+```
 
 #download and install java
 yum install -y java-1.8*
