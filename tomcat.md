@@ -33,10 +33,11 @@ vi /opt/apache-tomcat-9.0.19/conf/server.xml
 tomcatdown
 tomcatup
  ```
-
+ ```sh 
 # to manage the tomcat from other ip we need to add those ip in content.xml file and comment the following
 #/opt/apache-tomcat-9.0.19/webapps/host-manager/META-INF/context.xml
 #/opt/apache-tomcat-9.0.19/webapps/manager/META-INF/context.xml
+ ```
 
   <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
