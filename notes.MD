@@ -9,8 +9,9 @@ echo; echo "User $username’s password changed!"
 done
 ```
 
-# Linux Command adds line number
+# Linux Command  numbers the lines in a file.
 ```sh
+nl [OPTION]... [FILE]...
 nl test.txt
 ```
 
