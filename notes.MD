@@ -29,3 +29,7 @@ eg: awk '{print}' employee.txt
     awk '/manager/ {print}' employee.txt 
     awk '/manager/ {print}' employee.txt 
     ```
+# Shuf command is used to generate random permutations
+    ```sh
+    we can shuffle the lines of a given input file randomly
+    ```
