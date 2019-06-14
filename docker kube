@@ -15,7 +15,7 @@ sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
 echo "Installing Docker"
-sudo yum install -y docker-ce docker-ce-cli containerd.io
+sudo yum install -y docker-ce-18.06.3.ce-3.el7 docker-ce-cli- containerd.io
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo systemctl status docker
@@ -39,10 +39,25 @@ sudo systemctl enable --now kubelet
 sudo systemctl start kubelet
 sudo systemctl status kubelet
 
+#disable swap
+  # swapoff -a
+  # /etc/fstab
+
+#in order edit file in proc use following command, perform this on all nodes
+  # echo 1 | sudo dd of=/proc/sys/net/ipv4/tcp_timestamps && echo 1 | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-iptables
+
+
 #run this only on master
 kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.200.20.247
 
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+#creating Pod Network
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/62e44c867a2846fefb68bd5f178daf4da3095ccb/Documentation/kube-flannel.yml
 
+# To check pod details run following command
+kubectl get pods --all-namespaces
 
 
 
