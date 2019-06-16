@@ -1,3 +1,5 @@
+# Install Docker Kubeadmin on all nodes
+# Docker Installation
 sudo yum update -y
 echo "Update Completed"
 sudo yum remove -y docker \
@@ -20,8 +22,17 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo systemctl status docker
 docker --version
+# Disabling Swap on all nodes
+swapoff -a
+# comment swap line in this location /etc/fstab
 
-#echo  "installing kubeadmin"
+#in order edit file in proc use following command, perform this on all nodes
+  # echo 1 | sudo dd of=/proc/sys/net/ipv4/tcp_timestamps && echo 1 | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-iptables
+# 
+sudo setenforce 0
+sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+
+# Install Kubeadmin on all nodes
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
 name=Kubernetes
@@ -32,19 +43,13 @@ repo_gpgcheck=1
 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 exclude=kube*
 EOF
-sudo setenforce 0
-sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+
 sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 sudo systemctl enable --now kubelet 
 sudo systemctl start kubelet
 sudo systemctl status kubelet
 
-#disable swap
-  # swapoff -a
-  # /etc/fstab
 
-#in order edit file in proc use following command, perform this on all nodes
-  # echo 1 | sudo dd of=/proc/sys/net/ipv4/tcp_timestamps && echo 1 | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-iptables
 
 
 #run this only on master
@@ -58,6 +63,8 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/62e44c867a2846
 
 # To check pod details run following command
 kubectl get pods --all-namespaces
+
+
 
 
 
