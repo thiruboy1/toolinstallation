@@ -1,7 +1,10 @@
 # Cluster Commands
 kubectl get services                # List all services 
+
 kubectl get pods                    # List all pods
+
 kubectl get nodes -w                # Watch nodes continuously
+
 kubectl version                     # Get version information
 kubectl cluster-info                # Get cluster information
 kubectl config view                 # Get the configuration
