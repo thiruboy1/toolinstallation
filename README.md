@@ -2,7 +2,7 @@
 All tools installation guide
 
 # Project-1
-  #   prerequest:
+  ##   prerequest:
           1. install jenkins
           2. install publlish over ssh, maven plugin in jenkins
  
