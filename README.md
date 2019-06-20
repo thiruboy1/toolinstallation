@@ -26,11 +26,11 @@
  6. Install Tomcat on node( open port,create user,create user form managing thorugh jenkins)
  7. jenikins > credeintials > global credeintials > add deployer credeintials > save
  8. jenkins>project1>build>post build>deploy war/ear
-            ```
+```
             war/ear file: **/*.war
             credeintials: add deployer credeintials
             tomcat url: <enter tomcat url>
-            ```
+```
   9.save
 
 # Project-2
