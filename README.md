@@ -21,6 +21,7 @@
          1. check java code and pom.xml in git
          2. create porject1
          3. add git url in jenkins
+           3.1. For CI Add poll scm H/2 * * * *
          4. In build add "pom.xml" & in goals = clean,install,package
          5. Now save & apply and build now 
          6. Install Tomcat on node( open port,create user,create user form managing thorugh jenkins)
@@ -32,6 +33,7 @@
             tomcat url: <enter tomcat url>
 ```
   9.save
+  10. Build Now
 
 # Project-2
         CICD with jenkins git ansible tomcat
