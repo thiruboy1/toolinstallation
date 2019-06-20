@@ -24,29 +24,14 @@ ln -s /opt/apache-tomcat-9.0.19/bin/shutdown.sh /usr/bin/tomcatdown
 tomcatup
 curl localhost:8080
  ```
-### to change port open server.xml 
- ```sh 
-vi /opt/apache-tomcat-9.0.19/conf/server.xml
- ```
-#<connector port="8080"
- ```sh 
-tomcatdown
-tomcatup
- ```
-  
-### to manage the tomcat from other ip we need to add those ip in content.xml file and comment the following
- /opt/apache-tomcat-9.0.19/webapps/host-manager/META-INF/context.xml
- /opt/apache-tomcat-9.0.19/webapps/manager/META-INF/context.xml
- ```
+### To change port open server.xml 
 
-           <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"
-                  allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
-   ```     
-       
- tomcatdown
- tomcatup
+       vi /opt/apache-tomcat-9.0.19/conf/server.xml
+       #connector port="8080"
+       tomcatdown
+       tomcatup
  
-### create users in /conf/tomcat-user.xml
+### create users and allow manager access update following in /conf/tomcat-user.xml
 
 ```
   <role rolename="manager-gui"/>
@@ -57,6 +42,20 @@ tomcatup
   <user username="deployer" password="deployer" roles="manager-script"/>
   <user username="tomcat" password="admin" roles="manager-gui"/>
 ```
+
+### To manage the tomcat from other ip we need to add those ip in content.xml file and comment the following
+ 1. vi /opt/apache-tomcat-9.0.19/webapps/host-manager/META-INF/context.xml
+ 2. vi /opt/apache-tomcat-9.0.19/webapps/manager/META-INF/context.xml
+ ```
+
+           <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"
+                  allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+   ```     
+### Restart Tomcat     
+     tomcatdown
+     tomcatup
+ 
+
 
 
 
