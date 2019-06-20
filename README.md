@@ -5,6 +5,7 @@ All tools installation guide
   ###   prerequest:
           1. install jenkins
           2. install publlish over ssh, maven plugin in jenkins
+          3. Install Tomcat
  ### Steps
  1. check java code and pom.xml in git
  2. create porject1
