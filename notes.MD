@@ -1,4 +1,4 @@
-# To change password for script.
+# To change password using script.
 ```sh
 #!/bin/sh
 for i in `more userlist.txt `
