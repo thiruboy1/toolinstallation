@@ -1,4 +1,4 @@
-# Tomcat Inatallation on Linux
+# Tomcat Inatallation on Centos 7
  ```sh 
 sudo yum update -y
 ```
