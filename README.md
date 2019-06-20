@@ -2,10 +2,10 @@
 All tools installation guide
 
 # Project-1
-  ##   prerequest:
+  ###   prerequest:
           1. install jenkins
           2. install publlish over ssh, maven plugin in jenkins
- 
+ ### Steps
  1. check java code and pom.xml in git
  2. create porject1
  3. add git url in jenkins
