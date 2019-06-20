@@ -30,6 +30,7 @@
             war/ear file: **/*.war
             credeintials: add deployer credeintials
             tomcat url: <enter tomcat url>
+            ```
   9.save
 
 # Project-2
