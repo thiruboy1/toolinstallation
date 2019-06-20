@@ -33,7 +33,7 @@
             tomcat url: <enter tomcat url>
 ```
   9.save
-  10. Build Now
+  10.Build Now
 
 # Project-2
         CICD with jenkins git ansible tomcat
