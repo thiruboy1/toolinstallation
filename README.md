@@ -10,7 +10,7 @@
           7. sudo yum install jenkins
           8. systemctl start jenkins
           9. systemctl enable jenkins
-
+![](image/project1.png)
 # Project-1
   ###   prerequest:
           1. install jenkins,install java on jenkins server and configure java_home variable
