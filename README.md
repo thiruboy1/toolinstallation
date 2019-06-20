@@ -16,12 +16,21 @@
           1. install jenkins,install java on jenkins server and configure java_home variable
           2. install publlish over ssh, maven plugin in jenkins
           3. Install Tomcat
+          4. deploy on contianers plugin
  ### Steps
  1. check java code and pom.xml in git
  2. create porject1
  3. add git url in jenkins
  4. In build add "pom.xml" & in goals = clean,install,package
  5. Now save & apply and build now 
+ 6. Install Tomcat on node( open port,create user,create user form managing thorugh jenkins)
+ 7. jenikins > credeintials > global credeintials > add deployer credeintials > save
+ 8. jenkins>project1>build>post build>deploy war/ear
+            ```
+            war/ear file: **/*.war
+            credeintials: add deployer credeintials
+            tomcat url: <enter tomcat url>
+  9.save
 
 # Project-2
 CICD with jenkins git ansible tomcat
