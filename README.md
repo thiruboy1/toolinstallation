@@ -9,7 +9,7 @@
   6. sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
   7. sudo yum install jenkins
   8. systemctl start jenkins
-  9 systemctl enable jenkins
+  9. systemctl enable jenkins
 
 # Project-1
   ###   prerequest:
