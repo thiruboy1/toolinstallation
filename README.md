@@ -38,7 +38,7 @@
 
 # Project-2
 
-![](image/project1.png)
+![](image/project2.png)
 
    ### Prerequests
      1.Do the steps 1 to 4 in project 1 prerequests
