@@ -37,6 +37,9 @@
   10.Build Now
 
 # Project-2
+
+![](image/project1.png)
+
    ### Prerequests
      1.Do the steps 1 to 4 in project 1 prerequests
      2. Install Ansible On server
