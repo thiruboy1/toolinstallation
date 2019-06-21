@@ -37,12 +37,16 @@
   10.Build Now
 
 # Project-2
-        CICD with jenkins git ansible tomcat
-        1. install jenkins on server 
-        2. install "publish over ssh " plugin
-        3. create new projet "porject-2" > link GIT repo
-        4. clean compile package using maven 
-        5 in build section >select "send files or execute command over ssh"
+   ### Prerequests
+     1.Do the steps 1 to 4 in project 1 prerequests
+     2. Install Ansible On server
+     3. Configure Ansible in jenkins(publish over ssh-username ans password)
+     
+   ### Steps   
+        2. create new projet "porject-2" > 
+        3. Link GIT repo
+        3. clean compile package using maven 
+        4 in build section >select "send files or execute command over ssh"
              5.1. select server name
              5.2 source file "**/*.war" 
              5.3 remote direcotry "/opt/playbooks" 
