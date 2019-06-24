@@ -7,7 +7,7 @@
       kubectl config view                 # Get the configuration
       kubectl describe node <node>        # Output information about a node
 
-# Pod and Containe
+# Pod and Container
       kubectl get pods                         # List the current pods
       kubectl describe pod <name>              # Describe pod <name>
       kubectl get rc                           # List the replication controllers
@@ -26,11 +26,16 @@
       kubectl expose rc <name> --port=<external> --target-port=<internal> # Map port <external> to 
                                                                           # port <internal> on replication 
                                                                           # controller <name>
-# Replcation Commands
+# ReplcationSet Commands
       kubectl create -f replication.yml
       kubectl get replicset
       kubectl delete replicaset myapp-replcation.yml
       kubectl replace -f replication.yml
       kubectl scale -replicas=6 -f replicaset defenation.yml
                                                                     
-                                            
+# ReplcationController Commands
+      kubectl create -f replicationController.yml
+      kubectl get replicationcontroller
+      kubectl delete replicationcontrollet myapp-replcation.yml
+      kubectl replace -f replication.yml
+                                                
