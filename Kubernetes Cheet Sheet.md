@@ -41,5 +41,11 @@ kubectl scale --replicas=<count> rc <name>                          # Scale repl
 kubectl expose rc <name> --port=<external> --target-port=<internal> # Map port <external> to 
                                                                     # port <internal> on replication 
                                                                     # controller <name>
+# Replcation Commands
+  kubectl create -f replication.yml
+  kubectl get replicset
+  kubectl delete replicaset myapp-replcation.yml
+  kubectl replace -f replication.yml
+  kubectl scale -replicas=6 -f replicaset defenation.yml
                                                                     
                                             
